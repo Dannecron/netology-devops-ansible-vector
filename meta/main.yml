@@ -1,5 +1,6 @@
 galaxy_info:
   author: dannc
+  role_name: netology_devops_vector
   description: install vector
   company: ""
   license: BSD-3-Clause

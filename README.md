@@ -1,4 +1,4 @@
-ansible-vector
+netology-devops-ansible-vector
 =========
 
 Данная роль устанавливает `vector`.

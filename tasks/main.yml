@@ -51,9 +51,5 @@
     group: "{{ ansible_effective_group_id }}"
     mode: "0644"
     backup: true
-- name: vector | start service
-  become: true
-  ansible.builtin.service:
-    name: vector
-    state: started
-    daemon_reload: true
+  notify:
+    - restart-vector
