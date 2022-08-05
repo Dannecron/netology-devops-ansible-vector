@@ -3,6 +3,7 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Example assertion
-    ansible.builtin.assert:
-      that: true
+  - name: ensure vector service started
+    ansible.builtin.service:
+      name: vector
+      state: started
