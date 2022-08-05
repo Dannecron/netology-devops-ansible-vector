@@ -24,6 +24,23 @@ platforms:
       SUDO_GROUP: wheel
       DEPLOY_GROUP: deployer
       container: docker
+
+  - name: debian_bullseye_11
+    image: debian:bullseye
+    privileged: true
+    command: /sbin/init
+    capabilities:
+      - SYS_ADMIN
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup
+    env:
+      ANSIBLE_USER: ansible
+      SUDO_GROUP: sudo
+      DEPLOY_GROUP: deployer
+      container: docker
 provisioner:
   name: ansible
 verifier:

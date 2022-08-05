@@ -1,9 +1,7 @@
 ---
 - name: vector | install archive manager
-  become: true
-  ansible.builtin.yum:
-    name:
-      - tar
+  ansible.builtin.include_tasks:
+    file: "pre_install/{{ ansible_pkg_mgr }}.yml"
 - name: vector | get distrib
   ansible.builtin.get_url:
     url: "https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-x86_64-unknown-linux-musl.tar.gz"

@@ -1,0 +1,6 @@
+---
+- name: vector | install archive manager
+  become: true
+  ansible.builtin.apt:
+    name:
+      - tar
