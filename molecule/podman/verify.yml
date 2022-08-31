@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: ensure vector service started
+    - name: Ensure vector service started
       ansible.builtin.service:
         name: vector
         state: started
