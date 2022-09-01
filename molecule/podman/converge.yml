@@ -4,4 +4,4 @@
   tasks:
     - name: "Include netology_devops_vector"
       ansible.builtin.include_role:
-        name: "dannc.netology_devops_vector"
+        name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
